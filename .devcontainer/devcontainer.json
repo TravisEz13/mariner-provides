@@ -1,15 +1,8 @@
 // See https://aka.ms/vscode-remote/devcontainer.json for format details.
 {
 	"name": "mariner-provides",
-	"dockerFile": "Dockerfile",
+    "dockerFile": "Dockerfile",
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {}
-    },
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-vscode.powershell"
-			]
-		}
-	}
+    }
 }
