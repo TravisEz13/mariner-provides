@@ -1,5 +1,6 @@
 # Copyright (c) Microsoft Corporation.
 param(
+    [Parameter(Mandatory = $true)]
     $Query
 )
 
@@ -7,7 +8,7 @@ $extraParams = @()
 
 if (test-path /etc/os-release) {
     $LinuxInfo = Get-Content /etc/os-release -Raw | ConvertFrom-StringData
-    if ($LinuxInfo.Id -eq 'mariner') {
+    if ($LinuxInfo.Id -in 'mariner', 'azurelinux') {
         dnf provides $Query
         return
     }
