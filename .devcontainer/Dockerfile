@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/dotnet/sdk:9.0-azurelinux3.0
+FROM mcr.microsoft.com/dotnet/sdk:10.0-azurelinux3.0
 
 # Avoid warnings by switching to noninteractive
 RUN tdnf install -y dnf-utils powershell
